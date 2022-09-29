@@ -1,0 +1,12 @@
+
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": “769E6UL36S.jp.cliver.manaus.dev",
+        "paths": [ "NOT /e/*", "*", "/", “/archives/201?/* ]
+      }
+    ]
+  }
+}
