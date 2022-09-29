@@ -1,9 +1,0 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.manaus",
-    "sha256_cert_fingerprints":
-    ["3A:23:E5:A9:05:6B:51:81:B1:AE:50:4C:64:9F:AB:3D:CE:8D:07:17:21:38:B9:9C:82:04:86:4B:4E:5B:15:3A"]
-  }
-}]
