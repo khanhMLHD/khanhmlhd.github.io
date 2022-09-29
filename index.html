@@ -16,7 +16,13 @@
 
 <body data-gr-c-s-loaded="true">
     <a href="manaus://open.cuc.cut" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-    <a href="https://mana-us.com" target="_blank">home</a>
+    <a href="https://mana-us.com" target="_blank" onclick="return handleClick();">home</a>
+    <script type="text/javascript">
+    function handleClick () {
+        setTimeout(function () { window.location = "https://mana-us.com"; }, 25);
+window.location = "manaus://manausAPP_home";
+    }
+</script>
 </body>
 
 </html>
