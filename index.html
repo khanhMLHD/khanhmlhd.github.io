@@ -22,9 +22,10 @@
         if(getOS() == 'iOS'){
         setTimeout(function () { window.location = "https://mana-us.com"; }, 25);
             window.location = "manaus://manausAPP_home";
+            return;
         }
             window.location = "https://mana-us.com";
-    }
+        }
         function getOS() {
   var userAgent = window.navigator.userAgent,
       platform = window.navigator?.userAgentData?.platform || window.navigator.platform,
