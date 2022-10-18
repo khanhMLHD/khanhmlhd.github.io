@@ -16,10 +16,10 @@
 
 <body data-gr-c-s-loaded="true">
     <a href="manaus://manausAPP_home" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-    <div onclick="return handleClick()">home</div>
+    <div onclick="handleClick()">home</div>
     <script type="text/javascript">
     function handleClick () {
-            window.location = 'https://khanhmlhd.github.io';
+            window.location = window.location.origin;
         }
         function getOS() {
   var userAgent = window.navigator.userAgent,
