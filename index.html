@@ -16,11 +16,19 @@
 
 <body data-gr-c-s-loaded="true">
     <a href="manaus://manausAPP_home" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-    <a href="https://m.facebook.com" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-    <div onclick="return handleClick()">home</div>
+    <a href="https://line.me" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <div onclick="return handleClick()">mana-us</div>
+    <div onclick="return handleClick1()">line</div>
+    <div onclick="return handleClick2()">facebook</div>
     <script type="text/javascript">
+        function handleClick1 () {
+        window.location = 'https://line.me';
+        }
+        function handleClick2 () {
+        window.location = 'https://facebook.com';
+        }
     function handleClick () {
-        window.location = `https://mana-us.com`;
+        window.location = 'https://mana-us.com';
         }
         function getOS() {
   var userAgent = window.navigator.userAgent,
