@@ -21,6 +21,16 @@
     <div onclick="return handleClick1()">line</div>
     <div onclick="return handleClick2()">facebook</div>
     <script type="text/javascript">
+        window.addEventListener("beforeinstallprompt", e => {
+          if (navigator.getInstalledRelatedApps) {
+            e.preventDefault();  // Stop automated install prompt.
+            navigator.getInstalledRelatedApps().then(relatedApps => {
+              if (relatedApps.length == 0) {
+                e.prompt();
+              }
+            });
+          }
+        });
         function handleClick1 () {
         window.location = 'https://line.me';
         }
@@ -38,6 +48,8 @@
       iosPlatforms = ['iPhone', 'iPad', 'iPod'],
       os = null;
 
+
+            
   if (macosPlatforms.indexOf(platform) !== -1) {
     os = 'Mac OS';
   } else if (iosPlatforms.indexOf(platform) !== -1) {
