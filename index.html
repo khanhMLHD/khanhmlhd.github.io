@@ -1,42 +1,43 @@
 <html>
-    <link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/manifest.json">
 <head>
-    <style id="stndz-style"></style>
-    <title>Atin Garg</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Hind+Madurai|Montserrat:300,700" rel="stylesheet">
-    <!-- Fevicon -->
-   
+  <style id="stndz-style"></style>
+  <title>Atin Garg</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Hind+Madurai|Montserrat:300,700" rel="stylesheet">
+  <!-- Fevicon -->
 
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
 </head>
 
 <body data-gr-c-s-loaded="true">
-    <a href="manaus://manausAPP_home" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-    <a href="https://line.me" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-    <div onclick="return handleClick()">mana-us</div>
-    <div onclick="return handleClick1()">line</div>
-    <div onclick="return handleClick2()">facebook</div>
-   
-    <script type="text/javascript">
-         const relatedApps = await navigator.getInstalledRelatedApps();
-        relatedApps.forEach((app) => {
-            alert(app.id, app.platform, app.url)
-        });
-        function handleClick1 () {
-        console.log(relatedApps);
-        }
-        function handleClick2 () {
-        window.location = 'https://facebook.com';
-        }
-    function handleClick () {
-        window.location = 'https://staging.mana-us.com/gizmos';
-        }
-        function getOS() {
-  var userAgent = window.navigator.userAgent,
+<a href="manaus://manausAPP_home" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+<a href="https://line.me" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+<div onclick="return handleClick()">mana-us</div>
+<div onclick="return handleClick1()">line</div>
+<div onclick="return handleClick2()">facebook</div>
+
+<script type="text/javascript">
+
+  async function handleClick1 () {
+    const relatedApps = await navigator.getInstalledRelatedApps();
+    relatedApps.forEach((app) => {
+      alert(app.id, app.platform, app.url)
+    });
+    console.log(relatedApps);
+  }
+  function handleClick2 () {
+    window.location = 'https://facebook.com';
+  }
+  function handleClick () {
+    window.location = 'https://staging.mana-us.com/gizmos';
+  }
+  function getOS() {
+    var userAgent = window.navigator.userAgent,
       platform = window.navigator?.userAgentData?.platform || window.navigator.platform,
       macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
       windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
@@ -44,21 +45,21 @@
       os = null;
 
 
-            
-  if (macosPlatforms.indexOf(platform) !== -1) {
-    os = 'Mac OS';
-  } else if (iosPlatforms.indexOf(platform) !== -1) {
-    os = 'iOS';
-  } else if (windowsPlatforms.indexOf(platform) !== -1) {
-    os = 'Windows';
-  } else if (/Android/.test(userAgent)) {
-    os = 'Android';
-  } else if (/Linux/.test(platform)) {
-    os = 'Linux';
-  }
 
-  return os;
-}
+    if (macosPlatforms.indexOf(platform) !== -1) {
+      os = 'Mac OS';
+    } else if (iosPlatforms.indexOf(platform) !== -1) {
+      os = 'iOS';
+    } else if (windowsPlatforms.indexOf(platform) !== -1) {
+      os = 'Windows';
+    } else if (/Android/.test(userAgent)) {
+      os = 'Android';
+    } else if (/Linux/.test(platform)) {
+      os = 'Linux';
+    }
+
+    return os;
+  }
 </script>
 </body>
 
