@@ -23,11 +23,10 @@
    
     <script type="text/javascript">
          const relatedApps = await navigator.getInstalledRelatedApps();
-relatedApps.forEach((app) => {
-    alert(app.id, app.platform, app.url)
-});
+        relatedApps.forEach((app) => {
+            alert(app.id, app.platform, app.url)
+        });
         function handleClick1 () {
-            relatedApps;
         window.location = 'https://line.me';
         }
         function handleClick2 () {
