@@ -21,16 +21,7 @@
     <div onclick="return handleClick1()">line</div>
     <div onclick="return handleClick2()">facebook</div>
     <script type="text/javascript">
-        window.addEventListener("beforeinstallprompt", e => {
-          if (navigator.getInstalledRelatedApps) {
-            e.preventDefault();  // Stop automated install prompt.
-            navigator.getInstalledRelatedApps().then(relatedApps => {
-              if (relatedApps.length == 0) {
-                e.prompt();
-              }
-            });
-          }
-        });
+         navigator.getInstalledRelatedApps()
         function handleClick1 () {
         window.location = 'https://line.me';
         }
