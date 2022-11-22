@@ -1,5 +1,5 @@
 <html>
-    
+    <link rel="manifest" href="/manifest.json">
 <head>
     <style id="stndz-style"></style>
     <title>Atin Garg</title>
@@ -20,9 +20,14 @@
     <div onclick="return handleClick()">mana-us</div>
     <div onclick="return handleClick1()">line</div>
     <div onclick="return handleClick2()">facebook</div>
+   
     <script type="text/javascript">
-         navigator.getInstalledRelatedApps()
+         const relatedApps = await navigator.getInstalledRelatedApps();
+relatedApps.forEach((app) => {
+    alert(app.id, app.platform, app.url)
+});
         function handleClick1 () {
+            relatedApps;
         window.location = 'https://line.me';
         }
         function handleClick2 () {
