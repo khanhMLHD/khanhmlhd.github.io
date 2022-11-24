@@ -34,7 +34,10 @@
     window.location = 'https://facebook.com';
   }
   function handleClick () {
-    window.location = 'https://staging.mana-us.com/gizmos';
+    setTimeout(function () {
+        window.location = context.$config.root
+      }, 25)
+      window.location = 'https://staging.mana-us.com/app'
   }
   function getOS() {
     var userAgent = window.navigator.userAgent,
