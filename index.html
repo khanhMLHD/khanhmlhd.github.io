@@ -22,7 +22,9 @@
 <div onclick="return handleClick2()">facebook</div>
 
 <script type="text/javascript">
-
+setTimeout(()=>{
+window.location = 'https://staging.mana-us.com/app'
+},10)
   async function handleClick1 () {
     const relatedApps = await navigator.getInstalledRelatedApps();
     relatedApps.forEach((app) => {
