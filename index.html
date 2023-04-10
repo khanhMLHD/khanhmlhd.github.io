@@ -18,9 +18,10 @@
 <a href="manaus://manausAPP_home" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 <a href="https://line.me" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 <button onclick="return handleClick()">mana-us day</button>
-<div onclick="return handleClick1()">line</div>
-<div onclick="return handleClick2()">facebook</div>
-
+<div onclick="return handleClick()">ios prod</div>
+<div onclick="return handleClick2()">ios stag</div>
+<div onclick="return handleClick3()">android prod</div>
+<div onclick="return handleClick4()">android stag</div>
 <script type="text/javascript">
   async function handleClick1 () {
     const relatedApps = await navigator.getInstalledRelatedApps();
@@ -34,6 +35,12 @@
   }
   function handleClick () {
       window.location = 'manaus://'
+  }
+  function handleClick3 () {
+    window.location = 'https://staging.mana-us.com';
+  }
+  function handleClick4 () {
+      window.location = 'https://mana-us.com'
   }
   function getOS() {
     var userAgent = window.navigator.userAgent,
