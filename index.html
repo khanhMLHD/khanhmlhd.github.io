@@ -30,37 +30,31 @@
     });
     console.log(relatedApps);
   }
-
-  function isInstagramAppInstalled() {
-            // You can customize this based on how the Instagram app's URL scheme works
-            // This is just an example URL scheme and might not be accurate
-            var instagramScheme = "manaus-stg://app";
-            
-            var iframe = document.createElement("iframe");
-            iframe.style.display = "none";
-            iframe.src = instagramScheme;
-            document.body.appendChild(iframe);
-
-            setTimeout(function() {
-                document.body.removeChild(iframe);
-            }, 1000);
-
-            // You can customize the timeout value based on your requirements
-        }
-  
   function handleClick2 () {
-            var instagramScheme = "manaus-stg://app";
-            var appStoreURL = "https://itunes.apple.com/us/app/instagram/id389801252"; // Example App Store URL
+    var instagramScheme = "manaus-stg://";
+    var appStoreURL = "https://itunes.apple.com/us/app/instagram/id389801252"; // Example App Store URL
+    
+    // Set a flag to track if the app was opened
+    var appOpened = false;
+    
+    // Try to open the app
+    window.location.href = instagramScheme;
 
-            isInstagramAppInstalled();
-
-            setTimeout(function() {
-                window.location.href = instagramScheme;
-            }, 1000); // Adjust the timeout value as needed
-
-            setTimeout(function() {
-                window.location.href = appStoreURL;
-            }, 2000); // Adjust the timeout value as needed
+    // Set a short timeout to check if the app was opened
+    setTimeout(function() {
+        // If the app wasn't opened, redirect to the app store
+        if (!appOpened && document.visibilityState !== "hidden") {
+            window.location.href = appStoreURL;
+        }
+    }, 500); // Adjust the timeout value as needed
+    
+    // Listen for visibility change events
+    document.addEventListener("visibilitychange", function() {
+        // If the page becomes hidden, it means the app was opened
+        if (document.visibilityState === "hidden") {
+            appOpened = true;
+        }
+    });
   }
   function handleClick () {
      setTimeout(function () { window.location = "https://apps.apple.com/vn/app/messenger/id1480068668?mt=12"; }, 500);
