@@ -41,7 +41,7 @@
     console.log(relatedApps);
   }
   function handleClick2 () {
-    var instagramScheme = "manaus-stg://";
+    var instagramScheme = "instagram://";
     var appStoreURL = "https://itunes.apple.com/us/app/instagram/id389801252"; // Example App Store URL
     
     // Set a flag to track if the app was opened
@@ -64,8 +64,24 @@
   
   }
   function handleClick () {
-     setTimeout(function () { window.location = "https://apps.apple.com/vn/app/messenger/id1480068668?mt=12"; }, 500);
-      window.location = 'manaus://';
+    var instagramScheme = "manaus-stg://";
+    var appStoreURL = "https://itunes.apple.com/us/app/instagram/id389801252"; // Example App Store URL
+    
+    // Set a flag to track if the app was opened
+    
+    // Try to open the app
+    
+  
+    // Set a short timeout to check if the app was opened
+    setTimeout(function() {
+        // If the app wasn't opened, redirect to the app store
+        if (!appOpened && document.visibilityState === "hidden") {
+          console.log(2);
+            window.location.href = appStoreURL;
+        }
+        window.location.href = instagramScheme;
+        console.log(3);
+    }, 3000); // Adjust the timeout value as needed
   }
   function handleClick3 () {
     window.location = 'https://staging.mana-us.com/app/account/login';
