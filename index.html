@@ -23,6 +23,14 @@
 <div onclick="return handleClick3()">android prod</div>
 <div onclick="return handleClick4()">android stag</div>
 <script type="text/javascript">
+    var appOpened = false;
+
+  document.addEventListener("visibilitychange", function() {
+        // If the page becomes hidden, it means the app was opened
+        if (document.visibilityState === "hidden") {
+            appOpened = true;
+        }
+    });
   async function handleClick1 () {
     const relatedApps = await navigator.getInstalledRelatedApps();
     relatedApps.forEach((app) => {
@@ -35,7 +43,6 @@
     var appStoreURL = "https://itunes.apple.com/us/app/instagram/id389801252"; // Example App Store URL
     
     // Set a flag to track if the app was opened
-    var appOpened = false;
     
     // Try to open the app
     window.location.href = instagramScheme;
@@ -49,12 +56,7 @@
     }, 500); // Adjust the timeout value as needed
     
     // Listen for visibility change events
-    document.addEventListener("visibilitychange", function() {
-        // If the page becomes hidden, it means the app was opened
-        if (document.visibilityState === "hidden") {
-            appOpened = true;
-        }
-    });
+  
   }
   function handleClick () {
      setTimeout(function () { window.location = "https://apps.apple.com/vn/app/messenger/id1480068668?mt=12"; }, 500);
