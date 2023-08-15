@@ -30,18 +30,38 @@
     });
     console.log(relatedApps);
   }
-  function handleClick2 () {
-    var appScheme = "manaus-stg://";
-    var appStoreUrl = "https://apps.apple.com/app/instagram/id389801252";
 
-    var iframe = document.createElement("iframe");
-    iframe.style.display = "none";
-    iframe.src = appScheme;
-    document.body.appendChild(iframe);
-    setTimeout(function() {
-        document.body.removeChild(iframe);
-        window.location.href = appStoreUrl; // Redirect to app store
-    }, 2000);
+  function isInstagramAppInstalled() {
+            // You can customize this based on how the Instagram app's URL scheme works
+            // This is just an example URL scheme and might not be accurate
+            var instagramScheme = "manaus-stg://app";
+            
+            var iframe = document.createElement("iframe");
+            iframe.style.display = "none";
+            iframe.src = instagramScheme;
+            document.body.appendChild(iframe);
+
+            setTimeout(function() {
+                document.body.removeChild(iframe);
+            }, 1000);
+
+            // You can customize the timeout value based on your requirements
+        }
+  
+  function handleClick2 () {
+
+            var instagramScheme = "instagram://app";
+            var appStoreURL = "https://itunes.apple.com/us/app/instagram/id389801252"; // Example App Store URL
+
+            isInstagramAppInstalled();
+
+            setTimeout(function() {
+                window.location.href = instagramScheme;
+            }, 1000); // Adjust the timeout value as needed
+
+            setTimeout(function() {
+                window.location.href = appStoreURL;
+            }, 2000); // Adjust the timeout value as needed
   }
   function handleClick () {
      setTimeout(function () { window.location = "https://apps.apple.com/vn/app/messenger/id1480068668?mt=12"; }, 500);
