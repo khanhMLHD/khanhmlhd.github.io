@@ -24,7 +24,14 @@
 <div onclick="return handleClick4()">android stag</div>
 <script type="text/javascript">
     var appOpened = false;
-
+    document.addEventListener("visibilitychange", function() {
+      console.log('state',document.visibilityState);
+        // If the page becomes hidden, it means the app was opened
+        if (document.visibilityState === "hidden") {
+          console.log(1);
+            appOpened = true;
+        }
+    });
   async function handleClick1 () {
     const relatedApps = await navigator.getInstalledRelatedApps();
     relatedApps.forEach((app) => {
@@ -40,14 +47,7 @@
     
     // Try to open the app
     window.location.href = instagramScheme;
-    document.addEventListener("visibilitychange", function() {
-      console.log('state',document.visibilityState);
-        // If the page becomes hidden, it means the app was opened
-        if (document.visibilityState === "hidden") {
-          console.log(1);
-            appOpened = true;
-        }
-    });
+  
     // Set a short timeout to check if the app was opened
     setTimeout(function() {
         // If the app wasn't opened, redirect to the app store
