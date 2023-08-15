@@ -47,7 +47,8 @@
     // Set a flag to track if the app was opened
     
     // Try to open the app
-    
+    window.location.href = instagramScheme;
+  
   
     // Set a short timeout to check if the app was opened
     setTimeout(function() {
@@ -56,9 +57,8 @@
           console.log(2);
             window.location.href = appStoreURL;
         }
-        window.location.href = instagramScheme;
         console.log(3);
-    }, 3000); // Adjust the timeout value as needed
+    }, 2500); // Adjust the timeout value as needed
     
     // Listen for visibility change events
   
@@ -70,6 +70,7 @@
     // Set a flag to track if the app was opened
     
     // Try to open the app
+    window.location.href = instagramScheme;
     
   
     // Set a short timeout to check if the app was opened
@@ -79,9 +80,8 @@
           console.log(2);
             window.location.href = appStoreURL;
         }
-        window.location.href = instagramScheme;
         console.log(3);
-    }, 3000); // Adjust the timeout value as needed
+    }, 2500); // Adjust the timeout value as needed
   }
   function handleClick3 () {
     window.location = 'https://staging.mana-us.com/app/account/login';
