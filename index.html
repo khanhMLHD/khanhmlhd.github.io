@@ -47,15 +47,16 @@
     // Set a flag to track if the app was opened
     
     // Try to open the app
-    window.location.href = instagramScheme;
+    
   
     // Set a short timeout to check if the app was opened
     setTimeout(function() {
         // If the app wasn't opened, redirect to the app store
-        if (!appOpened && document.visibilityState !== "hidden") {
+        if (!appOpened && document.visibilityState === "hidden") {
           console.log(2);
             window.location.href = appStoreURL;
         }
+        window.location.href = instagramScheme;
         console.log(3);
     }, 3000); // Adjust the timeout value as needed
     
