@@ -31,6 +31,7 @@
           console.log(1);
             appOpened = true;
         }
+        appOpened = false
     });
   async function handleClick1 () {
     const relatedApps = await navigator.getInstalledRelatedApps();
@@ -56,7 +57,7 @@
             window.location.href = appStoreURL;
         }
         console.log(3);
-    }, 25); // Adjust the timeout value as needed
+    }, 1000); // Adjust the timeout value as needed
     
     // Listen for visibility change events
   
