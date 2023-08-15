@@ -31,8 +31,17 @@
     console.log(relatedApps);
   }
   function handleClick2 () {
-    setTimeout(function () { window.location = "https://apps.apple.com/vn/app/messenger/id1480068668?mt=12"; }, 500);
-    window.location = 'manaus-stg://';
+    var appScheme = "manaus-stg://";
+    var appStoreUrl = "https://apps.apple.com/app/instagram/id389801252";
+
+    var iframe = document.createElement("iframe");
+    iframe.style.display = "none";
+    iframe.src = appScheme;
+    document.body.appendChild(iframe);
+    setTimeout(function() {
+        document.body.removeChild(iframe);
+        window.location.href = appStoreUrl; // Redirect to app store
+    }, 2000);
   }
   function handleClick () {
      setTimeout(function () { window.location = "https://apps.apple.com/vn/app/messenger/id1480068668?mt=12"; }, 500);
