@@ -22,6 +22,7 @@
 <div onclick="return handleClick2()">ios stag</div>
 <div onclick="return handleClick3()">android prod</div>
 <div onclick="return handleClick4()">android stag</div>
+<div onclick="return handleClick5()">test universal link</div>
 <script type="text/javascript">
     var appOpened = false;
     document.addEventListener("visibilitychange", function() {
@@ -88,6 +89,9 @@
   }
   function handleClick4 () {
       window.location = 'https://mana-us.com/app';
+  }
+  function handleClick5 () {
+      window.location = 'https://khanhmlhd.github.io';
   }
   function getOS() {
     var userAgent = window.navigator.userAgent,
