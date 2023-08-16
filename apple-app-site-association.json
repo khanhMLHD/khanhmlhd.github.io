@@ -1,14 +1,14 @@
 {
     "activitycontinuation": {
         "apps": [
-          "9SW33X823D.jp.cliver.manaus",
-          "9SW33X823D.jp.cliver.manaus.dev"
+          "769E6UL36S.jp.cliver.manaus",
+          "769E6UL36S.jp.cliver.manaus.dev"
         ]
       },
       "webcredentials": {
         "apps": [
-            "9SW33X823D.jp.cliver.manaus",
-            "9SW33X823D.jp.cliver.manaus.dev"
+            "769E6UL36S.jp.cliver.manaus",
+            "769E6UL36S.jp.cliver.manaus.dev"
         ]
       },
     "applinks": {
@@ -16,11 +16,11 @@
          
           "details": [
             {
-                "appID": "9SW33X823D.jp.cliver.manaus",
+                "appID": "769E6UL36S.jp.cliver.manaus",
                 "paths": ["*"]
             },
             {
-                "appID": "9SW33X823D.jp.cliver.manaus.dev",
+                "appID": "769E6UL36S.jp.cliver.manaus.dev",
                 "paths": ["*"]
             }
            ]
