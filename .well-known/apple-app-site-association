@@ -1,4 +1,10 @@
 {
+    "activitycontinuation": {
+        "apps": [
+            "769E6UL36S.jp.cliver.manaus",
+            "769E6UL36S.jp.cliver.manaus.dev"
+        ]
+      },
     "applinks": {
          "apps": [],
          
