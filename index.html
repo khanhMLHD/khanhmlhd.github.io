@@ -53,7 +53,7 @@
     // Set a short timeout to check if the app was opened
     setTimeout(function() {
         // If the app wasn't opened, redirect to the app store
-        if (!appOpened && document.visibilityState === "hidden") {
+        if (!appOpened && document.visibilityState !== "hidden") {
           console.log(2);
             window.location.href = appStoreURL;
         }
@@ -76,7 +76,7 @@
     // Set a short timeout to check if the app was opened
     setTimeout(function() {
         // If the app wasn't opened, redirect to the app store
-        if (!appOpened && document.visibilityState === "hidden") {
+        if (!appOpened && document.visibilityState !== "hidden") {
           console.log(2);
             window.location.href = appStoreURL;
         }
