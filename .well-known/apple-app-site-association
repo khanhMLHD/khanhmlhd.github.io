@@ -4,11 +4,11 @@
           "details": [
             {
                 "appID": "769E6UL36S.jp.cliver.manaus",
-                "paths": ["/app"]
+                "paths": ["/store"]
             },
             {
                 "appID": "769E6UL36S.jp.cliver.manaus.dev",
-                "paths": ["/app"]
+                "paths": ["/store"]
             }
            ]
       }
