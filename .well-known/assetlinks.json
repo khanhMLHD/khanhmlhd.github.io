@@ -16,5 +16,14 @@
     "sha256_cert_fingerprints":
     ["3A:23:E5:A9:05:6B:51:81:B1:AE:50:4C:64:9F:AB:3D:CE:8D:07:17:21:38:B9:9C:82:04:86:4B:4E:5B:15:3A"]
   }
+ },
+ {
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.manaus.staging",
+    "sha256_cert_fingerprints":
+    ["AC:DA:BE:33:56:76:F1:16:E5:4B:9D:83:9F:32:14:13:33:74:B8:C6:7A:2B:27:BC:FF:B1:F5:96:86:50:8F:35"]
+  }
  }
 ]
